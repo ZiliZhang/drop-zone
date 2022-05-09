@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,user-scalable=0" />
+
+        <title>Drop Zone</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&family=Rozha+One&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    </head>
+    <body>
+        <main>
+            <div class="dz-hero">
+                <div class="dz-hero__title shifted-title">
+                    <span class="shifted-title__left">Drop</span>
+                    <span class="shifted-title__right">Zone</span>
+                </div>
+                <div class="dz-hero__content">
+                    <h1 class="dz-hero__headline">Leezy Boost 103</h1>
+                    <div id="js-countdown" class="dz-countdown" role="timer" aria-live="polite">
+                        <span class="sr-only">Remaining time of</span>
+                        <div class="dz-countdown__timer">
+                            <div class="dz-countdown__item">
+                                <div class="dz-countdown__value" id="js-countdown__days"></div>
+                                <div class="dz-countdown__label">Days</div>
+                            </div>
+                            <div class="dz-countdown__item">
+                                <div class="dz-countdown__value" id="js-countdown__hours"></div>
+                                <div class="dz-countdown__label">Hours</div>
+                            </div>
+                            <div class="dz-countdown__item">
+                                <div class="dz-countdown__value" id="js-countdown__minutes"></div>
+                                <div class="dz-countdown__label">Mins</div>
+                            </div>
+                            <div class="dz-countdown__item">
+                                <div class="dz-countdown__value" id="js-countdown__seconds"></div>
+                                <div class="dz-countdown__label">Secs</div>
+                            </div>
+                        </div>
+                        <p class="dz-countdown__message">Until drop</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script src="js/lib.min.js"></script>
+        <script src="js/app.min.js"></script>
+    </body>
+</html>
