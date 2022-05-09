@@ -1,5 +1,63 @@
+/**
+ * Global styles
+ */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --transition-duration: 0.45s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    /* adjust motion of 'transition' or 'animation' properties */
+    :root {
+        --transition-duration: 0s;
+    }
+}
+
 body {
     background-color: $color-white;
     color: $color-black;
     font-family: $font-family-primary;
+}
+
+.sr-only {
+    height: 1px;
+    left: -10000px;
+    overflow: hidden;
+    position: absolute;
+    top: auto;
+    width: 1px;
+}
+
+.shifted-title {
+    color: $color-white;
+    display: inline-flex;
+    flex-direction: column;
+    font-family: $font-family-secondary;
+    font-size: 36px;
+    font-weight: $font-weight-normal;
+    letter-spacing: 0.15em;
+    line-height: 40px;
+    text-transform: uppercase;
+
+    &__left,
+    &__right {
+        background-color: $color-black;
+        color: $color-white;
+        display: inline-block;
+        padding: 1px 13px 2px;
+    }
+
+    &__left {
+        margin-bottom: 8px;
+        margin-right: 20px;
+    }
+
+    &__right {
+        margin-left: 26px;
+    }
 }

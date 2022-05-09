@@ -1,0 +1,137 @@
+/**
+ * Drop Zone Hero
+ */
+.dz-hero {
+    background-image: url('#{$assets-images-path}/landing.jpg');
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+    padding: 31px 29px 22px 30px;
+    position: relative;
+
+    @media (min-width: $screen-lg) {
+        background-position: center left;
+        max-height: 80vh; // ~722px/900px at 1440
+    }
+}
+
+.dz-hero__title {
+    align-self: flex-end;
+}
+
+.dz-hero__content {
+    letter-spacing: 0.15em;
+    text-align: center;
+    text-transform: uppercase;
+    @media (min-width: $screen-lg) {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: 11%; // ~154px/1440px at 1440
+    }
+}
+
+.dz-hero__headline {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: $font-weight-bold;
+    line-height: 40px;
+    margin: 0;
+    @media (min-width: $screen-lg) {
+        font-size: 48px;
+    }
+}
+
+/**
+ * Drop Zone Countdown
+ */
+.dz-countdown {
+    opacity: 0;
+    transition: visibility 0s linear $transition-duration, opacity $transition-duration ease-out;
+    visibility: hidden;
+
+    &.active {
+        opacity: 1;
+        transition: visibility 0s linear 0s, opacity $transition-duration ease-out;
+        visibility: visible;
+    }
+}
+
+.dz-countdown__timer {
+    display: grid;
+    gap: 0 12px;
+    grid-template-columns: auto 1fr 1fr 1fr;
+    margin: 18px auto;
+    @media (min-width: $screen-lg) {
+        gap: 0 24px;
+        margin-bottom: 22px;
+        margin-top: 36px;
+    }
+}
+
+.dz-countdown__item {
+    display: flex;
+    flex-direction: column;
+}
+
+.dz-countdown__value {
+    --value-height: 40px;
+    display: inline-flex;
+    flex-wrap: nowrap;
+    height: var(--value-height);
+    text-align: center;
+
+    span {
+        background-color: $color-black;
+        color: $color-white;
+        font-family: $font-family-secondary;
+        font-size: 24px;
+        font-weight: $font-weight-normal;
+        height: 100%;
+        line-height: var(--value-height);
+        position: relative;
+        text-align: center;
+        width: 32px;
+    }
+
+    span + span {
+        margin-left: 6px;
+    }
+
+    @media (min-width: $screen-lg) {
+        --value-height: 73px;
+
+        span {
+            font-size: 48px;
+            width: 58px;
+        }
+
+        span + span {
+            margin-left: 12px;
+        }
+    }
+}
+
+.dz-countdown__label {
+    font-size: 14px;
+    font-weight: $font-weight-bold;
+    line-height: 16px;
+    margin-top: 8px;
+    @media (min-width: $screen-lg) {
+        font-size: 24px;
+        line-height: 28px;
+        margin-top: 15px;
+    }
+}
+
+.dz-countdown__message {
+    font-size: 18px;
+    line-height: 40px;
+    margin: 0;
+}

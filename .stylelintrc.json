@@ -18,6 +18,7 @@
             {
                 "ignore": ["attribute", "class"]
             }
-        ]
+        ],
+        "selector-class-pattern": null
     }
 }
