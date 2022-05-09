@@ -580,8 +580,11 @@ body {
 .dz-countdown__timer {
   display: grid;
   gap: 0 12px;
-  grid-template-columns: auto 1fr 1fr 1fr;
+  grid-template-columns: auto auto auto auto;
   margin: 18px auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media (min-width: 1024px) {
@@ -593,7 +596,7 @@ body {
   }
 }
 
-/* line 78, src/sass/components/_dz-hero.scss */
+/* line 79, src/sass/components/_dz-hero.scss */
 .dz-countdown__item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -602,9 +605,12 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-/* line 83, src/sass/components/_dz-hero.scss */
+/* line 85, src/sass/components/_dz-hero.scss */
 .dz-countdown__value {
   --value-height: 40px;
   display: -webkit-inline-box;
@@ -617,13 +623,13 @@ body {
 }
 
 @media (min-width: 1024px) {
-  /* line 83, src/sass/components/_dz-hero.scss */
+  /* line 85, src/sass/components/_dz-hero.scss */
   .dz-countdown__value {
     --value-height: 73px;
   }
 }
 
-/* line 95, src/sass/components/_dz-hero.scss */
+/* line 97, src/sass/components/_dz-hero.scss */
 .dz-countdown__value-item {
   background-color: #000;
   color: #fff;
@@ -637,24 +643,24 @@ body {
   width: 32px;
 }
 
-/* line 107, src/sass/components/_dz-hero.scss */
+/* line 109, src/sass/components/_dz-hero.scss */
 .dz-countdown__value-item + .dz-countdown__value-item {
   margin-left: 6px;
 }
 
 @media (min-width: 1024px) {
-  /* line 95, src/sass/components/_dz-hero.scss */
+  /* line 97, src/sass/components/_dz-hero.scss */
   .dz-countdown__value-item {
     font-size: 48px;
     width: 58px;
   }
-  /* line 115, src/sass/components/_dz-hero.scss */
+  /* line 117, src/sass/components/_dz-hero.scss */
   .dz-countdown__value-item + .dz-countdown__value-item {
     margin-left: 12px;
   }
 }
 
-/* line 121, src/sass/components/_dz-hero.scss */
+/* line 123, src/sass/components/_dz-hero.scss */
 .dz-countdown__label {
   font-size: 14px;
   font-weight: 900;
@@ -663,7 +669,7 @@ body {
 }
 
 @media (min-width: 1024px) {
-  /* line 121, src/sass/components/_dz-hero.scss */
+  /* line 123, src/sass/components/_dz-hero.scss */
   .dz-countdown__label {
     font-size: 24px;
     line-height: 28px;
@@ -671,7 +677,7 @@ body {
   }
 }
 
-/* line 133, src/sass/components/_dz-hero.scss */
+/* line 135, src/sass/components/_dz-hero.scss */
 .dz-countdown__message {
   font-size: 18px;
   line-height: 40px;
