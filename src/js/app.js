@@ -20,13 +20,14 @@ const updateTimer = (duration, $timer) => {
     let formattedDuration = formatDuration(duration);
     let updatedHtml = '';
 
-    // update timer aria-label to read the whole formatted duration
-    $timer.attr('aria-label', formattedDuration);
+    // add sr-only span to read the whole formatted duration
+    updatedHtml += `<span class="sr-only">${formattedDuration}</span>`;
 
     // display the duration in separate characters in the UI
     for (let c of formattedDuration) {
-        updatedHtml += `<span aria-hidden="true">${c}</span>`;
+        updatedHtml += `<span class="dz-countdown__value-item" aria-hidden="true">${c}</span>`;
     }
+
     $timer.html(updatedHtml);
 };
 

@@ -87,32 +87,32 @@
     height: var(--value-height);
     text-align: center;
 
-    span {
-        background-color: $color-black;
-        color: $color-white;
-        font-family: $font-family-secondary;
-        font-size: 24px;
-        font-weight: $font-weight-normal;
-        height: 100%;
-        line-height: var(--value-height);
-        position: relative;
-        text-align: center;
-        width: 32px;
+    @media (min-width: $screen-lg) {
+        --value-height: 73px;
     }
+}
 
-    span + span {
+.dz-countdown__value-item {
+    background-color: $color-black;
+    color: $color-white;
+    font-family: $font-family-secondary;
+    font-size: 24px;
+    font-weight: $font-weight-normal;
+    height: 100%;
+    line-height: var(--value-height);
+    position: relative;
+    text-align: center;
+    width: 32px;
+
+    & + & {
         margin-left: 6px;
     }
 
     @media (min-width: $screen-lg) {
-        --value-height: 73px;
+        font-size: 48px;
+        width: 58px;
 
-        span {
-            font-size: 48px;
-            width: 58px;
-        }
-
-        span + span {
+        & + & {
             margin-left: 12px;
         }
     }
