@@ -1,0 +1,23 @@
+{
+    "extends": ["stylelint-config-sass-guidelines"],
+    "plugins": ["stylelint-scss"],
+    "customSyntax": "postcss-scss",
+    "rules": {
+        "indentation": 4,
+        "scss/at-mixin-pattern": "(^[a-z]|[A-Z0-9])[a-z]*",
+        "scss/percent-placeholder-pattern": "(^[a-z]|[A-Z0-9])[a-z]*",
+        "scss/at-function-pattern": "(^[a-z]|[A-Z0-9])[a-z]*",
+        "scss/selector-no-redundant-nesting-selector": [
+            true,
+            {
+                "ignoreKeywords": ["^&:(?:hover|focus|before|after)$"]
+            }
+        ],
+        "selector-no-qualifying-type": [
+            true,
+            {
+                "ignore": ["attribute", "class"]
+            }
+        ]
+    }
+}
